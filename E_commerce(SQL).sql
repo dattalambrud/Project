@@ -1,0 +1,513 @@
+
+
+create database E_commerce_Project
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(50),
+    signup_date DATE
+);
+INSERT INTO customers (customer_id, name, city, signup_date) VALUES
+(1,'Customer_1','Mumbai','2024-01-01'),
+(2,'Customer_2','Delhi','2024-01-02'),
+(3,'Customer_3','Pune','2024-01-03'),
+(4,'Customer_4','Bangalore','2024-01-04'),
+(5,'Customer_5','Chennai','2024-01-05'),
+(6,'Customer_6','Hyderabad','2024-01-06'),
+(7,'Customer_7','Kolkata','2024-01-07'),
+(8,'Customer_8','Mumbai','2024-01-08'),
+(9,'Customer_9','Delhi','2024-01-09'),
+(10,'Customer_10','Pune','2024-01-10'),
+(11,'Customer_11','Bangalore','2024-01-11'),
+(12,'Customer_12','Chennai','2024-01-12'),
+(13,'Customer_13','Hyderabad','2024-01-13'),
+(14,'Customer_14','Kolkata','2024-01-14'),
+(15,'Customer_15','Mumbai','2024-01-15'),
+(16,'Customer_16','Delhi','2024-01-16'),
+(17,'Customer_17','Pune','2024-01-17'),
+(18,'Customer_18','Bangalore','2024-01-18'),
+(19,'Customer_19','Chennai','2024-01-19'),
+(20,'Customer_20','Hyderabad','2024-01-20'),
+(21,'Customer_21','Kolkata','2024-01-21'),
+(22,'Customer_22','Mumbai','2024-01-22'),
+(23,'Customer_23','Delhi','2024-01-23'),
+(24,'Customer_24','Pune','2024-01-24'),
+(25,'Customer_25','Bangalore','2024-01-25'),
+(26,'Customer_26','Chennai','2024-01-26'),
+(27,'Customer_27','Hyderabad','2024-01-27'),
+(28,'Customer_28','Kolkata','2024-01-28'),
+(29,'Customer_29','Mumbai','2024-01-29'),
+(30,'Customer_30','Delhi','2024-01-30'),
+(31,'Customer_31','Pune','2024-01-31'),
+(32,'Customer_32','Bangalore','2024-02-01'),
+(33,'Customer_33','Chennai','2024-02-02'),
+(34,'Customer_34','Hyderabad','2024-02-03'),
+(35,'Customer_35','Kolkata','2024-02-04'),
+(36,'Customer_36','Mumbai','2024-02-05'),
+(37,'Customer_37','Delhi','2024-02-06'),
+(38,'Customer_38','Pune','2024-02-07'),
+(39,'Customer_39','Bangalore','2024-02-08'),
+(40,'Customer_40','Chennai','2024-02-09'),
+(41,'Customer_41','Hyderabad','2024-02-10'),
+(42,'Customer_42','Kolkata','2024-02-11'),
+(43,'Customer_43','Mumbai','2024-02-12'),
+(44,'Customer_44','Delhi','2024-02-13'),
+(45,'Customer_45','Pune','2024-02-14'),
+(46,'Customer_46','Bangalore','2024-02-15'),
+(47,'Customer_47','Chennai','2024-02-16'),
+(48,'Customer_48','Hyderabad','2024-02-17'),
+(49,'Customer_49','Kolkata','2024-02-18'),
+(50,'Customer_50','Mumbai','2024-02-19'),
+(51,'Customer_51','Delhi','2024-02-20'),
+(52,'Customer_52','Pune','2024-02-21'),
+(53,'Customer_53','Bangalore','2024-02-22'),
+(54,'Customer_54','Chennai','2024-02-23'),
+(55,'Customer_55','Hyderabad','2024-02-24'),
+(56,'Customer_56','Kolkata','2024-02-25'),
+(57,'Customer_57','Mumbai','2024-02-26'),
+(58,'Customer_58','Delhi','2024-02-27'),
+(59,'Customer_59','Pune','2024-02-28'),
+(60,'Customer_60','Bangalore','2024-02-29'),
+(61,'Customer_61','Chennai','2024-03-01'),
+(62,'Customer_62','Hyderabad','2024-03-02'),
+(63,'Customer_63','Kolkata','2024-03-03'),
+(64,'Customer_64','Mumbai','2024-03-04'),
+(65,'Customer_65','Delhi','2024-03-05'),
+(66,'Customer_66','Pune','2024-03-06'),
+(67,'Customer_67','Bangalore','2024-03-07'),
+(68,'Customer_68','Chennai','2024-03-08'),
+(69,'Customer_69','Hyderabad','2024-03-09'),
+(70,'Customer_70','Kolkata','2024-03-10'),
+(71,'Customer_71','Mumbai','2024-03-11'),
+(72,'Customer_72','Delhi','2024-03-12'),
+(73,'Customer_73','Pune','2024-03-13'),
+(74,'Customer_74','Bangalore','2024-03-14'),
+(75,'Customer_75','Chennai','2024-03-15'),
+(76,'Customer_76','Hyderabad','2024-03-16'),
+(77,'Customer_77','Kolkata','2024-03-17'),
+(78,'Customer_78','Mumbai','2024-03-18'),
+(79,'Customer_79','Delhi','2024-03-19'),
+(80,'Customer_80','Pune','2024-03-20'),
+(81,'Customer_81','Bangalore','2024-03-21'),
+(82,'Customer_82','Chennai','2024-03-22'),
+(83,'Customer_83','Hyderabad','2024-03-23'),
+(84,'Customer_84','Kolkata','2024-03-24'),
+(85,'Customer_85','Mumbai','2024-03-25'),
+(86,'Customer_86','Delhi','2024-03-26'),
+(87,'Customer_87','Pune','2024-03-27'),
+(88,'Customer_88','Bangalore','2024-03-28'),
+(89,'Customer_89','Chennai','2024-03-29'),
+(90,'Customer_90','Hyderabad','2024-03-30'),
+(91,'Customer_91','Kolkata','2024-03-31'),
+(92,'Customer_92','Mumbai','2024-04-01'),
+(93,'Customer_93','Delhi','2024-04-02'),
+(94,'Customer_94','Pune','2024-04-03'),
+(95,'Customer_95','Bangalore','2024-04-04'),
+(96,'Customer_96','Chennai','2024-04-05'),
+(97,'Customer_97','Hyderabad','2024-04-06'),
+(98,'Customer_98','Kolkata','2024-04-07'),
+(99,'Customer_99','Mumbai','2024-04-08'),
+(100,'Customer_100','Delhi','2024-04-09');
+
+select * from customers
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2)
+);
+INSERT INTO products (product_id, product_name, category, price) VALUES
+(1,'Product_1','Electronics',1200),
+(2,'Product_2','Fashion',1500),
+(3,'Product_3','Furniture',8000),
+(4,'Product_4','Appliance',6000),
+(5,'Product_5','Electronics',2200),
+(6,'Product_6','Fashion',1800),
+(7,'Product_7','Furniture',12000),
+(8,'Product_8','Appliance',9000),
+(9,'Product_9','Electronics',3500),
+(10,'Product_10','Fashion',2000),
+
+(11,'Product_11','Furniture',15000),
+(12,'Product_12','Appliance',11000),
+(13,'Product_13','Electronics',4500),
+(14,'Product_14','Fashion',2500),
+(15,'Product_15','Furniture',18000),
+(16,'Product_16','Appliance',13000),
+(17,'Product_17','Electronics',5200),
+(18,'Product_18','Fashion',2800),
+(19,'Product_19','Furniture',20000),
+(20,'Product_20','Appliance',15000),
+
+(21,'Product_21','Electronics',6000),
+(22,'Product_22','Fashion',3000),
+(23,'Product_23','Furniture',22000),
+(24,'Product_24','Appliance',17000),
+(25,'Product_25','Electronics',7200),
+(26,'Product_26','Fashion',3200),
+(27,'Product_27','Furniture',25000),
+(28,'Product_28','Appliance',19000),
+(29,'Product_29','Electronics',8500),
+(30,'Product_30','Fashion',3500),
+
+(31,'Product_31','Furniture',27000),
+(32,'Product_32','Appliance',21000),
+(33,'Product_33','Electronics',9200),
+(34,'Product_34','Fashion',3800),
+(35,'Product_35','Furniture',30000),
+(36,'Product_36','Appliance',23000),
+(37,'Product_37','Electronics',10500),
+(38,'Product_38','Fashion',4000),
+(39,'Product_39','Furniture',32000),
+(40,'Product_40','Appliance',25000),
+
+(41,'Product_41','Electronics',11500),
+(42,'Product_42','Fashion',4200),
+(43,'Product_43','Furniture',35000),
+(44,'Product_44','Appliance',27000),
+(45,'Product_45','Electronics',12500),
+(46,'Product_46','Fashion',4500),
+(47,'Product_47','Furniture',38000),
+(48,'Product_48','Appliance',29000),
+(49,'Product_49','Electronics',13500),
+(50,'Product_50','Fashion',4800),
+
+(51,'Product_51','Furniture',40000),
+(52,'Product_52','Appliance',31000),
+(53,'Product_53','Electronics',14500),
+(54,'Product_54','Fashion',5000),
+(55,'Product_55','Furniture',42000),
+(56,'Product_56','Appliance',33000),
+(57,'Product_57','Electronics',15500),
+(58,'Product_58','Fashion',5200),
+(59,'Product_59','Furniture',45000),
+(60,'Product_60','Appliance',35000),
+
+(61,'Product_61','Electronics',16500),
+(62,'Product_62','Fashion',5500),
+(63,'Product_63','Furniture',47000),
+(64,'Product_64','Appliance',37000),
+(65,'Product_65','Electronics',17500),
+(66,'Product_66','Fashion',5800),
+(67,'Product_67','Furniture',50000),
+(68,'Product_68','Appliance',39000),
+(69,'Product_69','Electronics',18500),
+(70,'Product_70','Fashion',6000),
+
+(71,'Product_71','Furniture',52000),
+(72,'Product_72','Appliance',41000),
+(73,'Product_73','Electronics',19500),
+(74,'Product_74','Fashion',6300),
+(75,'Product_75','Furniture',55000),
+(76,'Product_76','Appliance',43000),
+(77,'Product_77','Electronics',20500),
+(78,'Product_78','Fashion',6500),
+(79,'Product_79','Furniture',58000),
+(80,'Product_80','Appliance',45000),
+
+(81,'Product_81','Electronics',21500),
+(82,'Product_82','Fashion',6800),
+(83,'Product_83','Furniture',60000),
+(84,'Product_84','Appliance',47000),
+(85,'Product_85','Electronics',22500),
+(86,'Product_86','Fashion',7000),
+(87,'Product_87','Furniture',63000),
+(88,'Product_88','Appliance',49000),
+(89,'Product_89','Electronics',23500),
+(90,'Product_90','Fashion',7200),
+
+(91,'Product_91','Furniture',65000),
+(92,'Product_92','Appliance',51000),
+(93,'Product_93','Electronics',24500),
+(94,'Product_94','Fashion',7500),
+(95,'Product_95','Furniture',68000),
+(96,'Product_96','Appliance',53000),
+(97,'Product_97','Electronics',25500),
+(98,'Product_98','Fashion',7800),
+(99,'Product_99','Furniture',70000),
+(100,'Product_100','Appliance',55000);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+INSERT INTO orders (order_id, customer_id, order_date, total_amount) VALUES
+(1001,1,'2025-01-01',2500),
+(1002,2,'2025-01-02',3200),
+(1003,3,'2025-01-03',5400),
+(1004,4,'2025-01-04',12000),
+(1005,5,'2025-01-05',7500),
+(1006,6,'2025-01-06',18000),
+(1007,7,'2025-01-07',2200),
+(1008,8,'2025-01-08',14500),
+(1009,9,'2025-01-09',9800),
+(1010,10,'2025-01-10',4000),
+
+(1011,11,'2025-01-11',6200),
+(1012,12,'2025-01-12',8700),
+(1013,13,'2025-01-13',15300),
+(1014,14,'2025-01-14',2100),
+(1015,15,'2025-01-15',19900),
+(1016,16,'2025-01-16',8800),
+(1017,17,'2025-01-17',7600),
+(1018,18,'2025-01-18',3400),
+(1019,19,'2025-01-19',16500),
+(1020,20,'2025-01-20',24000),
+
+(1021,21,'2025-01-21',4200),
+(1022,22,'2025-01-22',5600),
+(1023,23,'2025-01-23',7800),
+(1024,24,'2025-01-24',9200),
+(1025,25,'2025-01-25',11000),
+(1026,26,'2025-01-26',13400),
+(1027,27,'2025-01-27',15000),
+(1028,28,'2025-01-28',17000),
+(1029,29,'2025-01-29',19500),
+(1030,30,'2025-01-30',22000),
+
+(1031,31,'2025-02-01',3100),
+(1032,32,'2025-02-02',4600),
+(1033,33,'2025-02-03',8900),
+(1034,34,'2025-02-04',13200),
+(1035,35,'2025-02-05',17500),
+(1036,36,'2025-02-06',21000),
+(1037,37,'2025-02-07',2500),
+(1038,38,'2025-02-08',6100),
+(1039,39,'2025-02-09',9800),
+(1040,40,'2025-02-10',14300),
+
+(1041,41,'2025-02-11',18700),
+(1042,42,'2025-02-12',22500),
+(1043,43,'2025-02-13',27000),
+(1044,44,'2025-02-14',3500),
+(1045,45,'2025-02-15',7600),
+(1046,46,'2025-02-16',9900),
+(1047,47,'2025-02-17',12300),
+(1048,48,'2025-02-18',15600),
+(1049,49,'2025-02-19',19800),
+(1050,50,'2025-02-20',23000),
+
+(1051,51,'2025-03-01',4200),
+(1052,52,'2025-03-02',6800),
+(1053,53,'2025-03-03',9400),
+(1054,54,'2025-03-04',12500),
+(1055,55,'2025-03-05',16700),
+(1056,56,'2025-03-06',21000),
+(1057,57,'2025-03-07',26000),
+(1058,58,'2025-03-08',31000),
+(1059,59,'2025-03-09',37000),
+(1060,60,'2025-03-10',45000),
+
+(1061,61,'2025-03-11',5200),
+(1062,62,'2025-03-12',8800),
+(1063,63,'2025-03-13',12000),
+(1064,64,'2025-03-14',16500),
+(1065,65,'2025-03-15',21000),
+(1066,66,'2025-03-16',25000),
+(1067,67,'2025-03-17',29000),
+(1068,68,'2025-03-18',33000),
+(1069,69,'2025-03-19',38000),
+(1070,70,'2025-03-20',42000),
+
+(1071,71,'2025-04-01',6000),
+(1072,72,'2025-04-02',9500),
+(1073,73,'2025-04-03',14000),
+(1074,74,'2025-04-04',18500),
+(1075,75,'2025-04-05',23000),
+(1076,76,'2025-04-06',27500),
+(1077,77,'2025-04-07',32000),
+(1078,78,'2025-04-08',36500),
+(1079,79,'2025-04-09',41000),
+(1080,80,'2025-04-10',46000),
+
+(1081,81,'2025-04-11',7000),
+(1082,82,'2025-04-12',11000),
+(1083,83,'2025-04-13',15500),
+(1084,84,'2025-04-14',20000),
+(1085,85,'2025-04-15',24500),
+(1086,86,'2025-04-16',29000),
+(1087,87,'2025-04-17',34000),
+(1088,88,'2025-04-18',39000),
+(1089,89,'2025-04-19',44000),
+(1090,90,'2025-04-20',50000),
+
+(1091,91,'2025-04-21',8500),
+(1092,92,'2025-04-22',13000),
+(1093,93,'2025-04-23',17500),
+(1094,94,'2025-04-24',22000),
+(1095,95,'2025-04-25',27000),
+(1096,96,'2025-04-26',32000),
+(1097,97,'2025-04-27',37000),
+(1098,98,'2025-04-28',42000),
+(1099,99,'2025-04-29',48000),
+(1100,100,'2025-04-30',55000);
+
+CREATE TABLE order_items (
+    order_item_id INT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    price DECIMAL(10,2),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+INSERT INTO order_items (order_item_id, order_id, product_id, quantity, price) VALUES
+(1,1001,1,1,1200),
+(2,1002,2,2,1500),
+(3,1003,3,1,8000),
+(4,1004,4,1,6000),
+(5,1005,5,3,2200),
+(6,1006,6,2,1800),
+(7,1007,7,1,12000),
+(8,1008,8,1,9000),
+(9,1009,9,2,3500),
+(10,1010,10,1,2000),
+
+(11,1011,11,1,15000),
+(12,1012,12,1,11000),
+(13,1013,13,2,4500),
+(14,1014,14,3,2500),
+(15,1015,15,1,18000),
+(16,1016,16,1,13000),
+(17,1017,17,2,5200),
+(18,1018,18,1,2800),
+(19,1019,19,1,20000),
+(20,1020,20,1,15000),
+
+(21,1021,21,2,6000),
+(22,1022,22,1,3000),
+(23,1023,23,1,22000),
+(24,1024,24,2,17000),
+(25,1025,25,1,7200),
+(26,1026,26,2,3200),
+(27,1027,27,1,25000),
+(28,1028,28,1,19000),
+(29,1029,29,2,8500),
+(30,1030,30,1,3500),
+
+(31,1031,31,1,27000),
+(32,1032,32,2,21000),
+(33,1033,33,1,9200),
+(34,1034,34,2,3800),
+(35,1035,35,1,30000),
+(36,1036,36,1,23000),
+(37,1037,37,2,10500),
+(38,1038,38,1,4000),
+(39,1039,39,1,32000),
+(40,1040,40,1,25000),
+
+(41,1041,41,2,11500),
+(42,1042,42,1,4200),
+(43,1043,43,1,35000),
+(44,1044,44,2,27000),
+(45,1045,45,1,12500),
+(46,1046,46,3,4500),
+(47,1047,47,1,38000),
+(48,1048,48,1,29000),
+(49,1049,49,2,13500),
+(50,1050,50,1,4800),
+
+(51,1051,51,1,40000),
+(52,1052,52,2,31000),
+(53,1053,53,1,14500),
+(54,1054,54,2,5000),
+(55,1055,55,1,42000),
+(56,1056,56,1,33000),
+(57,1057,57,2,15500),
+(58,1058,58,1,5200),
+(59,1059,59,1,45000),
+(60,1060,60,1,35000),
+
+(61,1061,61,2,16500),
+(62,1062,62,1,5500),
+(63,1063,63,1,47000),
+(64,1064,64,2,37000),
+(65,1065,65,1,17500),
+(66,1066,66,2,5800),
+(67,1067,67,1,50000),
+(68,1068,68,1,39000),
+(69,1069,69,2,18500),
+(70,1070,70,1,6000),
+
+(71,1071,71,1,52000),
+(72,1072,72,2,41000),
+(73,1073,73,1,19500),
+(74,1074,74,2,6300),
+(75,1075,75,1,55000),
+(76,1076,76,1,43000),
+(77,1077,77,2,20500),
+(78,1078,78,1,6500),
+(79,1079,79,1,58000),
+(80,1080,80,1,45000),
+
+(81,1081,81,2,21500),
+(82,1082,82,1,6800),
+(83,1083,83,1,60000),
+(84,1084,84,2,47000),
+(85,1085,85,1,22500),
+(86,1086,86,2,7000),
+(87,1087,87,1,63000),
+(88,1088,88,1,49000),
+(89,1089,89,2,23500),
+(90,1090,90,1,7200),
+
+(91,1091,91,1,65000),
+(92,1092,92,2,51000),
+(93,1093,93,1,24500),
+(94,1094,94,2,7500),
+(95,1095,95,1,68000),
+(96,1096,96,1,53000),
+(97,1097,97,2,25500),
+(98,1098,98,1,7800),
+(99,1099,99,1,70000),
+(100,1100,100,1,55000);
+
+select * from order_items
+select*from products
+select * from orders
+select*from customers
+
+
+--1) view all customers
+select * from customers;
+
+--2) Show only cutomer name and city
+select name,city from customers;
+
+--3)find product above 20,000
+select * from products where price >20000;
+
+--4)count total cutomers 
+select count(*) from customers ;
+
+--5)total revenue generated
+select sum(total_amount) as total_revenue from orders;
+
+--6)find oders placed after 1 jan 2025
+  select * from orders where order_date>'2025-01-01';
+
+--7)top 5 expensive products
+select top 5 product_name,price from products order by price desc;
+
+--8) number of orders per customers 
+select customer_id, count(order_id) as total_orders from orders group by customer_id;
+
+--9)join customer and orders
+select c.name,o.order_id,o.total_amount from customers c join orders o on c.customer_id=o.customer_id;
+
+--10)total quantity sold per products
+select product_id,sum(quantity) as total_quantity_sold from order_items group by product_id;
+
+--11)find second highest order amount 
+select * from orders o1 where 2-1=(select count(distinct total_amount) from orders o2 where o2.total_amount>o1.total_amount);
+
+--12)find customer who never placed any order
+select c.name from customers c  left join orders o on c.customer_id=o.customer_id where o.order_id is null;
+
+--13) highest priced product in each category
+select category,max(price) as highest_price from products group by category;
